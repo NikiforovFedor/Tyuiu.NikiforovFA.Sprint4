@@ -1,5 +1,5 @@
-﻿using Tyuiu.NikiforovFA.Sprint4.Task0.V29.Lib;
-namespace Tyuiu.NikiforovFA.Sprint4.Task0.V29
+﻿using Tyuiu.NikiforovFA.Sprint4.Task1.V24.Lib;
+namespace Tyuiu.NikiforovFA.Sprint4.Task1.V24
 {
     internal class Program
     {
@@ -10,19 +10,27 @@ namespace Tyuiu.NikiforovFA.Sprint4.Task0.V29
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #4                                                               *");
             Console.WriteLine("* Тема: Одномерные массивы                                                *");
-            Console.WriteLine("* Задание #0                                                              *");
-            Console.WriteLine("* Вариант #29                                                             *");
+            Console.WriteLine("* Задание #1                                                              *");
+            Console.WriteLine("* Вариант #24                                                             *");
             Console.WriteLine("* Выполнил: Никифоров Федор Александрович | ПКТб-24-1                     *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
-            Console.WriteLine("* Написать консольную программу на C#, которая вычисляет сумму нечетных   *");
-            Console.WriteLine("* элементов массива                                                       *");
+            Console.WriteLine("* Написать консольную программу на C#, которая вычисляет произведение     *");
+            Console.WriteLine("* нечетных элементов массива                                              *");
             Console.WriteLine("***************************************************************************");
-            Console.WriteLine("* Исходные данные:                                                        *");
-            Console.WriteLine("{ 7, 4, 3, 2, 1, 5, 9, 8, 7, 4 }");
+            Console.WriteLine("* Введите исходные данные:                                                *");
+            int[] res = new int[16];
+            for (int i = 0; i < res.Length; i++)
+            {
+                Console.WriteLine("Введите " + i + " элемент массива");
+                res[i] = Convert.ToInt32(Console.ReadLine());
+            }
             Console.WriteLine("* Результат:                                                              *");
-            int[] res = { 7, 4, 3, 2, 1, 5, 9, 8, 7, 4 };
-            Console.WriteLine(ds.GetSumOddArrEl(res));
+            Console.WriteLine(ds.Calculate(res));
+
+
+            
         }
     }
+    
 }
