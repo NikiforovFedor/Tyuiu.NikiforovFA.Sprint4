@@ -23,6 +23,21 @@ namespace Tyuiu.NikiforovFA.Sprint4.Task3.V10
                          { 8, 5, 7, 4, 7 },
                          { 7, 6, 7, 4, 7 },
                          { 5, 8, 7, 8, 8 }};
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    if (j != 4)
+                    {
+                        Console.Write(res[i, j] + " ");
+                    }
+                    else
+                    {
+                        Console.Write(res[i, j]);
+                    }
+                }
+                Console.WriteLine();
+            }
             Console.WriteLine("* Результат:                                                              *");
             Console.WriteLine(ds.Calculate(res));
         }
