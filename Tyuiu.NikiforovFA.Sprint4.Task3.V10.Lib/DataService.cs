@@ -11,7 +11,7 @@ namespace Tyuiu.NikiforovFA.Sprint4.Task3.V10.Lib
             {
                 if (array[3, i] > m) 
                 {
-                    m = array[3, i];
+                    m = array[2, i];
                 }
                 else { continue; }
             }
