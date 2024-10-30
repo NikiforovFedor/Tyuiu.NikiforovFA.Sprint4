@@ -9,8 +9,8 @@ namespace Tyuiu.NikiforovFA.Sprint4.Task3.V10
             Console.Title = "Спринт #4 | Выполнил: Никифоров Ф.А. | ПКТб-24-1";
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #4                                                               *");
-            Console.WriteLine("* Тема: Одномерные массивы                                                *");
-            Console.WriteLine("* Задание #2                                                              *");
+            Console.WriteLine("* Тема: Двумерные массивы. (ввод с клавиатуры)                            *");
+            Console.WriteLine("* Задание #3                                                              *");
             Console.WriteLine("* Вариант #10                                                             *");
             Console.WriteLine("* Выполнил: Никифоров Федор Александрович | ПКТб-24-1                     *");
             Console.WriteLine("***************************************************************************");
