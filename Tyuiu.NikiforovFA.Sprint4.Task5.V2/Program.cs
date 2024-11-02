@@ -1,5 +1,5 @@
-﻿using Tyuiu.NikiforovFA.Sprint4.Task4.V26.Lib;
-namespace Tyuiu.NikiforovFA.Sprint4.Task4.V26
+﻿using Tyuiu.NikiforovFA.Sprint4.Task5.V2.Lib;
+namespace Tyuiu.NikiforovFA.Sprint4.Task5.V2
 {
     internal class Program
     {
@@ -9,22 +9,22 @@ namespace Tyuiu.NikiforovFA.Sprint4.Task4.V26
             Console.Title = "Спринт #4 | Выполнил: Никифоров Ф.А. | ПКТб-24-1";
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #4                                                               *");
-            Console.WriteLine("* Тема: Двумерные массивы. (ввод с клавиатуры)                            *");
-            Console.WriteLine("* Задание #4                                                              *");
-            Console.WriteLine("* Вариант #26                                                             *");
+            Console.WriteLine("* Тема: Двумерные массивы. (генератор случайных чисел)                    *");
+            Console.WriteLine("* Задание #5                                                              *");
+            Console.WriteLine("* Вариант #2                                                              *");
             Console.WriteLine("* Выполнил: Никифоров Федор Александрович | ПКТб-24-1                     *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
-            Console.WriteLine("* Написать консольную программу на C#, которая заменяет нечетные значения *");
-            Console.WriteLine("* матрицы на 0                                                            *");
+            Console.WriteLine("* Написать консольную программу на C#, которая считает количество         *");
+            Console.WriteLine("* отрицательных значений матрицы.                                         *");
             Console.WriteLine("***************************************************************************");
             int[,] res = new int[5, 5];
+            Random r = new Random();
             for (int i = 0; i < 5; i++)
             {
                 for (int j = 0; j < 5; j++)
                 {
-                    Console.WriteLine($"Введите элемент с индексами ({i}, {j}): ");
-                    res[i,j] = Convert.ToInt32(Console.ReadLine());
+                    res[i, j] = r.Next(-7, 5);
                 }
             }
             Console.WriteLine("* Исходная матрица:                                                       *");
@@ -35,6 +35,10 @@ namespace Tyuiu.NikiforovFA.Sprint4.Task4.V26
                     if (j != 4)
                     {
                         Console.Write(res[i, j] + " ");
+                        if (res[i,j + 1] >= 0)
+                        {
+                            Console.Write(" ");
+                        }
                     }
                     else
                     {
@@ -44,23 +48,7 @@ namespace Tyuiu.NikiforovFA.Sprint4.Task4.V26
                 Console.WriteLine();
             }
             Console.WriteLine("* Результат:                                                              *");
-            int[,] r = ds.Calculate(res);
-            for (int i = 0; i < 5; i++)
-            {
-                for (int j = 0; j < 5; j++)
-                {
-                    if (j != 4)
-                    {
-                        Console.Write(r[i, j] + " ");
-                    }
-                    else
-                    {
-                        Console.Write(r[i, j]);
-                    }
-                }
-                Console.WriteLine();
-            }
-
-        }
+            Console.WriteLine(ds.Calculate(res));
+        }    
     }
 }
