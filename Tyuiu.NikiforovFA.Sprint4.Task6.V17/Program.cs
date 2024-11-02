@@ -34,7 +34,6 @@ namespace Tyuiu.NikiforovFA.Sprint4.Task6.V17
             }
             Console.WriteLine("* Результат:                                                              *");
             Console.WriteLine(ds.Calculate(s));
-            
         }
     }
 }
